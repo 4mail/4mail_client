@@ -19,10 +19,10 @@ public class PopFetcher{
     	Properties props = new Properties();
     	props.setProperty("mail.store.protocol", "pop3");
     	props.setProperty("mail.pop3.port", "110");
-    	props.setProperty("mail.pop3.host", "pop.yeah.net");
+    	props.setProperty("mail.pop3.host", "mail.pku.edu.cn");
     	Session session =Session.getDefaultInstance(props);
     	Store store = session.getStore("pop3");
-    	store.connect("username@yeah.net","password");
+    	store.connect("username@pku.edu.cn","password");
     	Folder folder = store.getFolder("INBOX");
     	folder.open(Folder.READ_WRITE);
     	System.out.println("Here comes the emails~~~~");

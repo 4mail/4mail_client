@@ -12,10 +12,9 @@ import javax.mail.*;
 import javax.mail.internet.MimeMultipart;
 import javax.mail.internet.MimeUtility;
 
-
 public class PopFetcher{
 	
-    public static void main(String args[]) throws MessagingException, IOException{
+    public static void amain(String args[]) throws MessagingException, IOException{
     	Properties props = new Properties();
     	props.setProperty("mail.store.protocol", "pop3");
     	props.setProperty("mail.pop3.port", "110");

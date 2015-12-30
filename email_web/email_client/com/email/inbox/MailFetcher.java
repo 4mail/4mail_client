@@ -1,7 +1,7 @@
 package com.email.inbox;
-import java.io.*;
-import java.util.*;
 
 public class MailFetcher {
-	System.out.println("hello world");
+	public static void mail(String argv[]) {
+		System.out.print("fhaskhfa");
+	}
 }

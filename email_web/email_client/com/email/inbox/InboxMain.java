@@ -11,7 +11,7 @@ import com.email.window.WindowAdapter;
 
 
 public class InboxMain {
-	public static void main(String args[]){
+	public static void inboxmain(String args[]){
 		new AppFrame();
 	}
 }

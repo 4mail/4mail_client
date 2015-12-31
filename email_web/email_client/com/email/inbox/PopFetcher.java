@@ -14,14 +14,14 @@ import javax.mail.internet.MimeUtility;
 
 public class PopFetcher{
 	
-    public static void amain(String args[]) throws MessagingException, IOException{
+    public static void popfetcher() throws MessagingException, IOException{
     	Properties props = new Properties();
     	props.setProperty("mail.store.protocol", "pop3");
     	props.setProperty("mail.pop3.port", "110");
-    	props.setProperty("mail.pop3.host", "mail.pku.edu.cn");
+    	props.setProperty("mail.pop3.host", "pop.126.com");
     	Session session =Session.getDefaultInstance(props);
     	Store store = session.getStore("pop3");
-    	store.connect("username@pku.edu.cn","password");
+    	store.connect("emailtest15@126.com","vfsioxqfarumqjxz");  //这里网易邮箱真实很流氓啊，必须用绑定手机，然后用客户端授权码登陆
     	Folder folder = store.getFolder("INBOX");
     	folder.open(Folder.READ_WRITE);
     	System.out.println("Here comes the emails~~~~");

@@ -4,6 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="email_client/META-INF/lib/mail.jar" sourcepath="email_client/META-INF/lib/mail.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/mail1/lib/dom4j-2.0.0-ALPHA-2.jar"/>
+	<classpathentry kind="lib" path="E:/Documents/GitHub/4mail_client/email_web/email_client/META-INF/lib/dom4j-2.0.0-ALPHA-2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

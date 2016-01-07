@@ -136,6 +136,8 @@ public class GetMail {
 		Enumeration enumMail = null;
 		// 取出每个邮件的信息
 		for (int i = 0; i < msg.length; i++) {
+			if(!msg[i].getFolder().isOpen())//判断是否open 
+	         msg[i].getFolder().open(Folder.READ_WRITE);
 			map = new HashMap();
 			// 读取邮件ID
 			enumMail = msg[i].getAllHeaders();
@@ -229,9 +231,6 @@ public class GetMail {
 		Map map = new HashMap();
 		// 找到目标邮件
 		Message readmsg = findMail(msg, id);
-		System.out.println("发送时间："+readmsg.getSentDate());
-		System.out.println("主题"+decodeText(readmsg.getSubject()));
-		System.out.println("内容"+readmsg.getContent());
 		// 读取邮件标题
 		map.put("subject", readmsg.getSubject());
 		// 读取发件人
@@ -240,10 +239,14 @@ public class GetMail {
 		map.put("attach", "");
 		// 取得邮件内容
 		if (readmsg.isMimeType("text/*")) {
-			System.out.println("GETmail-readmail:"+readmsg.getContent().toString());
 			map.put("content", readmsg.getContent().toString());
 		} else {
+			System.out.println("this is not a text mail");
 			Multipart mp = (Multipart) readmsg.getContent();
+		    if(mp == null){
+		    	System.out.println("the content is null");
+		    }
+		    else System.out.println("--------------------------multipart:"+mp.toString());
 			BodyPart part = null;
 			String disp = null;
 			StringBuffer result = new StringBuffer();
@@ -321,6 +324,16 @@ public class GetMail {
 		return s;
 	}
 
+		public String parseMultipart(BodyPart msg) throws MessagingException, IOException{
+	    		if(msg.isMimeType("text/*")){
+	    			return msg.getContent().toString();
+	    		}
+	    		else{
+	    			Multipart mpart = (Multipart)msg.getContent();
+	    			return parseMultipart(mpart.getBodyPart(0));
+	    		}
+	    }
+	 
 	 /** 
      * 文本解码 
      * @param encodeText 解码MimeUtility.encodeText(String text)方法编码后的文本 

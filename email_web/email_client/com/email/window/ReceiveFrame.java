@@ -19,6 +19,7 @@ public class ReceiveFrame extends BaseReceiceFrame {
 
 	public void doubleClick(int selectRom) {// 双击事件的处理
 		System.out.println("ReceiveFrame"+ReceiveMailTable.list.size()+"-----"+selectRom);
+		System.out.println("the content text:"+ReceiveMailTable.readMail(ReceiveMailTable.list,selectRom));
 		mailContent.setText(ReceiveMailTable.readMail(ReceiveMailTable.list,
 				selectRom));
 	}
@@ -34,10 +35,5 @@ public class ReceiveFrame extends BaseReceiceFrame {
 				selectRoms[j]--;
 			}
 		}
-	}
-
-	// 右键第三个选项被选中刷新收件箱
-	private void popupThreeisSelected() {
-
 	}
 }

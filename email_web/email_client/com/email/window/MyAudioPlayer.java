@@ -18,7 +18,7 @@ public class MyAudioPlayer {
 
 	public MyAudioPlayer() {
 		try {
-			url = MyAudioPlayer.class.getResource("/newmail.wav");// 获取音乐文件的url
+			url = MyAudioPlayer.class.getResource("/res/newmail.wav");// 获取音乐文件的url
 			InputStream is = url.openStream();// 获得音乐文件的输入流
 			as = new AudioStream(is);
 		} catch (Exception e) {

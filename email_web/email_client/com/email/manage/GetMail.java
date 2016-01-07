@@ -135,7 +135,7 @@ public class GetMail {
 		SimpleDateFormat fmt = new SimpleDateFormat("yyyy年MM月dd日 hh:mm-ss");
 		Enumeration enumMail = null;
 		// 取出每个邮件的信息
-		for (int i = 0; i < msg.length; i++) {
+		for (int i = msg.length-1; i >= 0; i--) {
 			if(!msg[i].getFolder().isOpen())//判断是否open 
 	         msg[i].getFolder().open(Folder.READ_WRITE);
 			map = new HashMap();
@@ -160,7 +160,7 @@ public class GetMail {
 			map.put("size", new Integer(msg[i].getSize()));
 			map.put("hasAttach", "&nbsp;");
 			// 判断是否有附件
-			if (msg[i].isMimeType("application/octet-stream")) {
+			if (msg[i].isMimeType("multipart/*")) {
 				mp = (Multipart) msg[i].getContent();
 				// 遍历每个Miltipart对象
 				

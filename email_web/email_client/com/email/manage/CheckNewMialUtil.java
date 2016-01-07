@@ -49,7 +49,7 @@ public class CheckNewMialUtil {
 	public void closeConnect() {
 		try {
 			if (folder != null)
-				folder.close(true);// 关闭连接时是否删除邮件，true删除邮件
+				folder.close(false);// 关闭连接时是否删除邮件，true删除邮件
 		} catch (MessagingException e) {
 			e.printStackTrace();
 		} finally {
@@ -70,7 +70,7 @@ public class CheckNewMialUtil {
 		connect();
 		try {
 			folder = store.getDefaultFolder().getFolder("INBOX");
-			folder.open(Folder.READ_ONLY);
+			folder.open(Folder.READ_WRITE);
 			count = folder.getMessageCount();
 			if (isCheck) {
 				CheckNewMail.setNewMailCount(count);

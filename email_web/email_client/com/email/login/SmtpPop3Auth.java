@@ -3,12 +3,7 @@ package com.email.login;
 import javax.mail.Authenticator;
 import javax.mail.PasswordAuthentication;
 
-/**
- * 类说明：SMTP/POP3授权验证类
- * 
- * @author 作者: LiuJunGuang
- * @version 创建时间：2011-4-22 下午06:42:08
- */
+
 
 public class SmtpPop3Auth extends Authenticator {
 	String user, password;

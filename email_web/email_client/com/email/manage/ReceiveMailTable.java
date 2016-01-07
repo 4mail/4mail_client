@@ -122,6 +122,7 @@ public class ReceiveMailTable extends Thread {
 	public static String readMail(LinkedList<String> linkedList, int id) {// id行号
 		String message = null;
 		String mailID = (String) linkedList.get(id);// 返回指定行对应的mailID号
+		System.out.println("id="+id+",mailID="+mailID);
 		try {
 			Map result = getmail.readMail(mailID);
 			message = result.get("content").toString();// 得到邮件内容

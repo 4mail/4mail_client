@@ -202,8 +202,7 @@ public class MainFrame extends JFrame implements ActionListener, MouseListener {
 			if (selectedNode == null)
 				return;
 			else if (selectedNode.toString().equals("发件夹")) {
-				sendFrame = FrameFactory.getFrameFactory().getSendFrame();
-				addIFame(sendFrame);// 发件夹
+				addIFame(FrameFactory.getFrameFactory().getSendFrame());// 发件夹
 			} else if (selectedNode.toString().equals("收件夹")) {
 				addIFame(FrameFactory.getFrameFactory().getReceiveFrame());// 收件夹
 			} else if (selectedNode.toString().equals("已发送邮件")) {

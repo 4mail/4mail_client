@@ -18,6 +18,7 @@ public class ReceiveFrame extends BaseReceiceFrame {
 	}
 
 	public void doubleClick(int selectRom) {// 双击事件的处理
+		System.out.println("ReceiveFrame"+ReceiveMailTable.list.size()+"-----"+selectRom);
 		mailContent.setText(ReceiveMailTable.readMail(ReceiveMailTable.list,
 				selectRom));
 	}

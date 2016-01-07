@@ -14,18 +14,24 @@ import javax.mail.internet.MimeUtility;
 
 public class PopFetcher{
 	
-    public static void popfetcher() throws MessagingException, IOException{
+    public static void main(String args[]) throws MessagingException, IOException{
     	Properties props = new Properties();
     	props.setProperty("mail.store.protocol", "pop3");
     	props.setProperty("mail.pop3.port", "110");
     	props.setProperty("mail.pop3.host", "pop.126.com");
     	Session session =Session.getDefaultInstance(props);
     	Store store = session.getStore("pop3");
-    	store.connect("emailtest15@126.com","vfsioxqfarumqjxz");  //这里网易邮箱真实很流氓啊，必须用绑定手机，然后用客户端授权码登陆
+    	try{
+    	store.connect("emailtest15@126.com","ctqvewfikbwjsqvh");  //这里网易邮箱真实很流氓啊，必须用绑定手机，然后用客户端授权码登陆
+    	}
+    	catch(Exception e){
+    		System.out.println(e.getMessage()+"//"+e.getLocalizedMessage());
+    		return;
+    	}
     	Folder folder = store.getFolder("INBOX");
     	folder.open(Folder.READ_WRITE);
     	System.out.println("Here comes the emails~~~~");
-    	int messageCount = folder.getMessageCount();  //全部邮件�?
+    	int messageCount = folder.getMessageCount();  //全部邮件�?
     	System.out.println("邮件总数"+messageCount);
     	/**
     	System.out.println("邮件总数"+folder.getUnreadMessageCount());
@@ -35,14 +41,14 @@ public class PopFetcher{
     	Message[] messages = folder.getMessages();
     	
     	if (messages == null || messages.length < 1)   
-            throw new MessagingException("未找到要解析的邮�?!"); 
+            throw new MessagingException("未找到要解析的邮�?!"); 
     	
     	for(int i=0;i<messages.length;i++){
-    		System.out.println("----------我们来处理第"+i+"封邮�?---------");
+    		System.out.println("----------我们来处理第"+i+"封邮�?---------");
     		Message message = messages[i];
-    		System.out.println("发�?�时间："+message.getSentDate());
+    		System.out.println("发�?�时间："+message.getSentDate());
     		System.out.println("主题"+decodeText(message.getSubject()));
-    		System.out.println("内容�?"+message.getContent());
+    		System.out.println("内容�?"+message.getContent());
     		
     		@SuppressWarnings("rawtypes")
 			Enumeration headers = message.getAllHeaders();
@@ -69,7 +75,7 @@ public class PopFetcher{
     	System.out.println("multipart_count="+count);
     	for(int idx=0;idx<count;idx++){
     		BodyPart bodyPart = multipart.getBodyPart(idx);
-    		System.out.println("�?"+idx+"条的内容类型为："+bodyPart.getContentType());
+    		System.out.println("�?"+idx+"条的内容类型为："+bodyPart.getContentType());
     		if(bodyPart.isMimeType("text/plain")){
     			System.out.println("plain-------------"+bodyPart.getContent());
     		}

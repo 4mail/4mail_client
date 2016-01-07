@@ -71,7 +71,7 @@ public class LoginFrame extends JFrame implements ActionListener, ItemListener {
 		backgroundLabel.add(passwordLable);
 
 		// 发件箱服务器地址列表
-		String[] smtpAdd = { "smtp.163.com", "smtp.126.com", "smtp.yeah.net",
+		String[] smtpAdd = { "smtp.pku.edu.cn","smtp.163.com", "smtp.126.com", "smtp.yeah.net",
 				"smtp.qq.com", "smtp.sina.com", "smtp.sohu.com",
 				"smtp.139.com", "smtp.mail.yahoo.cn", "smtp.sogou.com",
 				"smtp.tom.com", "smtp.189.cn", "smtp.live.com",
@@ -84,7 +84,7 @@ public class LoginFrame extends JFrame implements ActionListener, ItemListener {
 		backgroundLabel.add(smtpCB);
 
 		// 收件箱服务器地址列表
-		String[] pop3Add = { "pop.163.com", "pop.126.com", "pop.yeah.net",
+		String[] pop3Add = { "pop3.pku.edu.cn","pop.163.com", "pop.126.com", "pop.yeah.net",
 				"pop.qq.com", "pop.sina.com", "pop3.sohu.com", "pop.139.com",
 				"pop.mail.yahoo.cn", "pop3.sogou.com", "pop.tom.com",
 				"pop.189.cn", "pop3.live.com", "pop.gmail.com", "pop.21cn.com",
@@ -157,7 +157,7 @@ public class LoginFrame extends JFrame implements ActionListener, ItemListener {
 		smtpCB.setSelectedIndex(0);
 		pop3CB.setSelectedIndex(0);
 		nameTF.setText("emailtest15@126.com");
-		passwordTF.setText("vfsioxqfarumqjxz");
+		passwordTF.setText("ctqvewfikbwjsqvh");
 	}
 
 	// 登录验证

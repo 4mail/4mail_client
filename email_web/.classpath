@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry excluding="META-INF/lib/|META-INF/lib/" kind="src" path="email_client"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="email_client/META-INF/lib/mail.jar" sourcepath="email_client/META-INF/lib/mail.jar"/>
-	<classpathentry kind="lib" path="C:/Users/杏仁/4mail_client/email_web/email_client/META-INF/lib/dom4j-2.0.0-ALPHA-2.jar"/>
+	<classpathentry kind="lib" path="email_client/META-INF/lib/dom4j-2.0.0-ALPHA-2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

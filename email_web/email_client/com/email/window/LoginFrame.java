@@ -156,8 +156,8 @@ public class LoginFrame extends JFrame implements ActionListener, ItemListener {
 	private void reset() {
 		smtpCB.setSelectedIndex(0);
 		pop3CB.setSelectedIndex(0);
-		nameTF.setText("1300012942@pku.edu.cn");
-		passwordTF.setText("ILoveBill");
+		nameTF.setText("username@163.com");
+		passwordTF.setText("password");
 	}
 
 	// µÇÂ¼ÑéÖ¤

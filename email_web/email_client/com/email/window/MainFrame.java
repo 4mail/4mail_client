@@ -119,15 +119,15 @@ public class MainFrame extends JFrame implements ActionListener, MouseListener {
 		validate();
 
 		labelbackground = new JLabel();
-//		labelbackground.setIcon(null); // ´°Ìå±³¾°
+		labelbackground.setIcon(null); // ´°Ìå±³¾°
 		desktopPane.addComponentListener(new ComponentAdapter() {
 			public void componentResized(final ComponentEvent e) {
 				Dimension size = e.getComponent().getSize();
 				labelbackground.setSize(e.getComponent().getSize());
-//				labelbackground.setText("<html><img width=" + size.width
-//						+ " height=" + size.height + " src='"
-//						+ this.getClass().getResource("/main.gif")
-//						+ "'></html>");
+				labelbackground.setText("<html><img width=" + size.width
+						+ " height=" + size.height + " src='"
+						+ this.getClass().getResource("/res/mainbg2.jpg")
+						+ "'></html>");
 			}
 		});
 		desktopPane.add(labelbackground, new Integer(Integer.MIN_VALUE));

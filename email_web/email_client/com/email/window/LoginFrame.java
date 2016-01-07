@@ -46,8 +46,8 @@ public class LoginFrame extends JFrame implements ActionListener, ItemListener {
 		setTitle("µ«¬º” œ‰");
 		JLabel backgroundLabel = new JLabel();
 		backgroundLabel.setBounds(0, 0, 768, 540);
-//		backgroundLabel.setText("<html><img width=776 height=574 src='"
-//				+ this.getClass().getResource("/loginBg.jpg") + "'></html>");
+		backgroundLabel.setText("<html><img width=776 height=574 src='"
+				+ this.getClass().getResource("/res/loginBg1.jpg") + "'></html>");
 		backgroundLabel.setLayout(null);
 
 		final JLabel smtpLable = new JLabel();

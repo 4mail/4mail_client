@@ -1,21 +1,20 @@
-package com.email.window;
+package com.email.login;
 
 import java.util.Vector;
 
 import javax.swing.table.AbstractTableModel;
 
 /**
- * 类说明：联系人列表表格模型
- * 
- * @author 作者: LiuJunGuang
- * @version 创建时间：2011-1-1 下午04:05:26
+ * 获取账户列表
+ * @author zhujuan
+ *
  */
-public class LinkmanListTabelModel extends AbstractTableModel {
+public class AccountListTableModel extends AbstractTableModel  {
 	private static final long serialVersionUID = 1L;
-	private final String[] COLUMNS = new String[] { "名称", "昵称", "电子邮箱地址" };
+	private final String[] COLUMNS = new String[] { "pop服务器", "smtp服务器", "用户名","密码" };
 	private static Vector<Vector<String>> v = new Vector<Vector<String>>();
 
-	public LinkmanListTabelModel() {
+	public AccountListTableModel() {
 	}
 
 	@Override

@@ -28,6 +28,7 @@ import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 import com.email.contacts.ReadLinkmanXMl;
+import com.email.login.ReadAccountXML;
 import com.email.manage.ReceiveMailTable;
 
 
@@ -39,14 +40,18 @@ public class MainFrame extends JFrame implements ActionListener, MouseListener {
 	private JTree tree;// 树形图
 	@SuppressWarnings("rawtypes")
 	private JList jl;// 联系人列表
-	private JPanel panel, panelframe;// panelframe左半部界面
+	private JList jA;//账户列表
+	private JPanel panel, panelA, panelframe;// panelframe左半部界面,pane联系人界面，panelA账户列表
 	private JLabel labelbackground;
 	private JScrollPane scrollPane;
+	private JScrollPane scrollPaneA;
 	private JMenuItem exitMI = null, newMailMI = null, sendedMI = null,
 			receiveMI = null, recycleMI = null, refreshMI = null;
 	private JButton addLinkmanButton = null;// 添加联系人按钮
+	private JButton addAccountButton = null;// 添加账户按钮
 	private JMenu mailMenu = null;
 	private ReadLinkmanXMl readLinkman = null;
+	private ReadAccountXML readAccount = null;
 
 	// 初始化界面配置
 	public void jFrameValidate() {
@@ -99,10 +104,15 @@ public class MainFrame extends JFrame implements ActionListener, MouseListener {
 		panel = new JPanel();
 		panel.setLayout(new BorderLayout());
 		panel.setPreferredSize(new Dimension(160, 300));
+		// 账户面板
+		panelA = new JPanel();
+		panelA.setLayout(new BorderLayout());
+		panelA.setPreferredSize(new Dimension(160, 300));
 		// 界面左半部面板
 		panelframe = new JPanel();
 		panelframe.setLayout(new BorderLayout());
-		panelframe.add(panel, BorderLayout.CENTER);
+		panelframe.add(panelA, BorderLayout.CENTER);
+		panelframe.add(panel, BorderLayout.SOUTH);
 		panelframe.add(tree, BorderLayout.NORTH);
 
 		addLinkmanButton = new JButton();
@@ -117,7 +127,20 @@ public class MainFrame extends JFrame implements ActionListener, MouseListener {
 		panel.add(scrollPane, BorderLayout.CENTER);
 		scrollPane.setViewportView(jl);// 在滚动面板中添加联系人
 		validate();
-
+		
+		addAccountButton = new JButton();
+		addAccountButton.setText("新建账户");
+		addAccountButton.setIcon(EditorUtils.createIcon("image.png"));
+		panelA.add(addAccountButton, BorderLayout.NORTH);
+		addAccountButton.addActionListener(this);// 注册添加账户事件
+		readAccount = new ReadAccountXML();
+		jA = readAccount.makeList();// 返回账户列表
+		jA.addMouseListener(this);// 添加账户列表双击事件
+		scrollPaneA = new JScrollPane();
+		panelA.add(scrollPaneA, BorderLayout.CENTER);
+		scrollPaneA.setViewportView(jA);// 在滚动面板中添加联系人
+		validate();
+		
 		labelbackground = new JLabel();
 		labelbackground.setIcon(null); // 窗体背景
 		desktopPane.addComponentListener(new ComponentAdapter() {
@@ -176,6 +199,8 @@ public class MainFrame extends JFrame implements ActionListener, MouseListener {
 			System.exit(0);// 退出系统
 		} else if (e.getSource() == addLinkmanButton) {
 			addIFame(FrameFactory.getFrameFactory().getAddLinkManFrame());// 联系人列表
+		} else if (e.getSource() == addAccountButton) {
+			addIFame(FrameFactory.getFrameFactory().getAddAccountFrame());// 账户列表
 		} else if (e.getSource() == newMailMI) {// 新建邮件
 			addIFame(FrameFactory.getFrameFactory().getSendFrame());// 发件夹
 		} else if (e.getSource() == itemPopupOne || e.getSource() == refreshMI) {// 右键刷新收件列表
@@ -196,8 +221,7 @@ public class MainFrame extends JFrame implements ActionListener, MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// 树形节点中的单击事件
-		DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) tree
-				.getLastSelectedPathComponent();
+		DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
 		if (e.getSource() == tree && e.getButton() != 3 && e.getButton() != 2) {
 			if (selectedNode == null)
 				return;

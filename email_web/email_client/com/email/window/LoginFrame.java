@@ -13,9 +13,13 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 
+import com.email.login.AccountEventAction;
+import com.email.login.AccountListTableModel;
 import com.email.login.LoginAction;
+import com.email.login.SaveAccount2XML;
 import com.email.manage.CheckNewMail;
 
 
@@ -168,6 +172,20 @@ public class LoginFrame extends JFrame implements ActionListener, ItemListener {
 			progressBar.dispose();
 			new CheckNewMail().start();// 开始检测新邮件
 			this.dispose();// 释放本窗口资源
+			JTable accountList = new JTable();// 账户列表
+		    accountList.setModel(new AccountListTableModel());
+		    AccountEventAction accountEvent = new AccountEventAction();
+		    accountEvent.addaccount(popHost, smtpHost, username, password);
+//			SaveAccount2XML saveAccount = new SaveAccount2XML();
+//			Vector<String> myVector = new Vector<String>();
+//			myVector.addElement(popHost);
+//			myVector.addElement(smtpHost);
+//			myVector.addElement(username);
+//			myVector.addElement(password);
+//			Vector<Vector<String>> myVector2 = new Vector<Vector<String>>();
+//			myVector2.add(myVector);
+//			saveAccount.saveAccountXml("account.xml", myVector2);
+			
 			new MainFrame().setVisible(true);
 		} else {// 登录失败
 			progressBar.setVisible(false);

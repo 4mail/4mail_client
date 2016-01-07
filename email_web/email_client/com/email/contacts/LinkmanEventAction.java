@@ -6,16 +6,13 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
-import com.email.window.LinkmanListTabelModel;
-
 /**
- * 类说明：处理添加删除联系人事件
  * 
- * @author 作者: LiuJunGuang
- * @version 创建时间：2011-1-1 下午05:11:31
+ * @author zhujuan
+ *
  */
 public class LinkmanEventAction {
-	Vector<Vector<String>> linkmanVectors = LinkmanListTabelModel.getVector();
+	Vector<Vector<String>> linkmanVectors = LinkmanListTableModel.getVector();
 	private JTextField name = null, nickName = null, emailAdress = null;
 	private JTable linkmanList = null;
 

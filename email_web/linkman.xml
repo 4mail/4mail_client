@@ -1,2 +1,10 @@
-<?xml version="1.0" encoding="gbk"?>
-<linkmans><!--我的联系人列表！--><linkman><name>4mail</name><nickname>java</nickname><emailadress>javamail2010@yeah.net</emailadress></linkman><linkman><name>祝娟</name><nickname>祝娟</nickname><emailadress>missingxf@yeah.net</emailadress></linkman><linkman><name>程珈琪</name><nickname></nickname><emailadress>chengchengjq@yeah.net</emailadress></linkman><linkman><name>孙然</name><nickname></nickname><emailadress>sunran@yeah.net</emailadress></linkman><linkman><name>马迪嘉</name><nickname></nickname><emailadress>dijiama@yeah.net</emailadress></linkman></linkmans>
+<?xml version="1.0" encoding="utf-8"?>
+<linkmans>
+<!--鎴戠殑鑱旂郴浜哄垪琛紒-->
+<linkman>
+<name>4mail</name><nickname>java</nickname><emailadress>javamail2010@yeah.net</emailadress></linkman>
+<linkman><name>绁濆</name><nickname>绁濆</nickname><emailadress>missingxf@yeah.net</emailadress></linkman>
+<linkman><name>绋嬬張鐞�</name><nickname></nickname><emailadress>chengchengjq@yeah.net</emailadress></linkman>
+<linkman><name>瀛欑劧</name><nickname></nickname><emailadress>sunran@yeah.net</emailadress></linkman>
+<linkman><name>椹开鍢�</name><nickname></nickname><emailadress>dijiama@yeah.net</emailadress></linkman>
+</linkmans>

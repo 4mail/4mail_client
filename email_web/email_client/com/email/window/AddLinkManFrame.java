@@ -18,6 +18,7 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
 import com.email.contacts.LinkmanEventAction;
+import com.email.contacts.LinkmanListTableModel;
 
 @SuppressWarnings("serial")
 public class AddLinkManFrame extends JInternalFrame implements ActionListener,
@@ -61,7 +62,7 @@ public class AddLinkManFrame extends JInternalFrame implements ActionListener,
 		emailAdressTF.getDocument().addDocumentListener(this);
 
 		linkmanList = new JTable();// 联系人列表
-		linkmanList.setModel(new LinkmanListTabelModel());
+		linkmanList.setModel(new LinkmanListTableModel());
 		linkmanJSP = new JScrollPane(linkmanList);
 		linkmanJSP.setPreferredSize(new Dimension(400, 150));
 

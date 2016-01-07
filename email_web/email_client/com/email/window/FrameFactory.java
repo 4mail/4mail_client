@@ -45,4 +45,9 @@ public class FrameFactory {
 	public AddLinkManFrame getAddLinkManFrame() {
 		return new AddLinkManFrame();
 	}
+	
+	// ’Àªß¡–±Ì
+	public AddAccountFrame getAddAccountFrame() {
+		return new AddAccountFrame();
+	}
 }

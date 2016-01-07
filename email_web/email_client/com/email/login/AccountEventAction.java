@@ -99,7 +99,6 @@ public class AccountEventAction {
 		accountVector.add(username);
 		accountVector.add(password);
 		accountVectors.add(accountVector);
-		accountList.updateUI();
 	}
 
 	// ¼ì²âÊÇ·ñ¿ÉÒÔµÇÂ½

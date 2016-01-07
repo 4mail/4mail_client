@@ -40,14 +40,14 @@ public class LoginFrame extends JFrame implements ActionListener, ItemListener {
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public LoginFrame() {
 		super();
-		this.setIconImage(EditorUtils.createIcon("email.png").getImage());
+		this.setIconImage(EditorUtils.createIcon("icon.png").getImage());
 		getContentPane().setLayout(null);
 		jFrameValidate();
 		setTitle("µ«¬º” œ‰");
 		JLabel backgroundLabel = new JLabel();
 		backgroundLabel.setBounds(0, 0, 768, 540);
-		backgroundLabel.setText("<html><img width=776 height=574 src='"
-				+ this.getClass().getResource("/loginBg.jpg") + "'></html>");
+//		backgroundLabel.setText("<html><img width=776 height=574 src='"
+//				+ this.getClass().getResource("/loginBg.jpg") + "'></html>");
 		backgroundLabel.setLayout(null);
 
 		final JLabel smtpLable = new JLabel();

@@ -60,7 +60,7 @@ public class MainFrame extends JFrame implements ActionListener, MouseListener {
 	public MainFrame() {
 		super("电子邮件");
 		MAINFRAME = this;
-		this.setIconImage(EditorUtils.createIcon("email.png").getImage());
+		this.setIconImage(EditorUtils.createIcon("icon.png").getImage());
 		desktopPane = new JDesktopPane();
 		jFrameValidate();// 初始化界面
 		JMenuBar menuBar = new JMenuBar();
@@ -119,15 +119,15 @@ public class MainFrame extends JFrame implements ActionListener, MouseListener {
 		validate();
 
 		labelbackground = new JLabel();
-		labelbackground.setIcon(null); // 窗体背景
+//		labelbackground.setIcon(null); // 窗体背景
 		desktopPane.addComponentListener(new ComponentAdapter() {
 			public void componentResized(final ComponentEvent e) {
 				Dimension size = e.getComponent().getSize();
 				labelbackground.setSize(e.getComponent().getSize());
-				labelbackground.setText("<html><img width=" + size.width
-						+ " height=" + size.height + " src='"
-						+ this.getClass().getResource("/main.gif")
-						+ "'></html>");
+//				labelbackground.setText("<html><img width=" + size.width
+//						+ " height=" + size.height + " src='"
+//						+ this.getClass().getResource("/main.gif")
+//						+ "'></html>");
 			}
 		});
 		desktopPane.add(labelbackground, new Integer(Integer.MIN_VALUE));

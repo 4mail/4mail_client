@@ -49,7 +49,6 @@ public class LoginAction {
 				e.printStackTrace();
 			}
 		}
-		System.out.println(POP3Host+","+SMTPHost+","+user+","+password+","+isLogin);
 		return isLogin;
 	}
 

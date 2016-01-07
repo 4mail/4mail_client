@@ -129,7 +129,7 @@ public class MainFrame extends JFrame implements ActionListener, MouseListener {
 		validate();
 		
 		addAccountButton = new JButton();
-		addAccountButton.setText("新建账户");
+		addAccountButton.setText("账户管理");
 		addAccountButton.setIcon(EditorUtils.createIcon("image.png"));
 		panelA.add(addAccountButton, BorderLayout.NORTH);
 		addAccountButton.addActionListener(this);// 注册添加账户事件

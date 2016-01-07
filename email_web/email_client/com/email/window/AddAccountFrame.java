@@ -222,6 +222,7 @@ public class AddAccountFrame extends JInternalFrame implements ActionListener, D
 			accountEvent.changeAccount(accountList.getSelectedRow());// ÇÐ»»ÕË»§
 		} else if (e.getSource() == ok) {
 			accountEvent.ok();
+			this.dispose();
 		} else if (e.getSource() == cancel) {
 			this.dispose();// ¹Ø±Õ´°¿Ú
 		}

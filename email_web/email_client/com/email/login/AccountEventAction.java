@@ -8,11 +8,15 @@ import javax.swing.JTextField;
 
 import com.email.login.AccountListTableModel;
 import com.email.login.SaveAccount2XML;
+import com.email.manage.GetMail;
+import com.email.outbox.SendAttachMail;
 
 public class AccountEventAction {
 	Vector<Vector<String>> accountVectors = AccountListTableModel.getVector();
 	private JTextField pop_server = null, smtp_server = null, username = null, password = null;
 	private JTable accountList = null;
+	private GetMail getMail = null;
+	private SendAttachMail sendMail = null;
 
 	public AccountEventAction(JTextField pop_serverTF, JTextField smtp_serverTF,
 			JTextField usernameTF, JTextField passwordTF, JTable accountListTF) {
@@ -53,9 +57,20 @@ public class AccountEventAction {
 	// 删除联系人
 		public void changeAccount(int selectRow) {
 			if (selectRow < accountVectors.size() && selectRow != -1) {// 选中一行删除
-				accountVectors.get(selectRow);
-				
+				Vector<String> selected_account = accountVectors.get(selectRow);
+				// 实例化收邮件对象
+				getMail = GetMail.getMailInstantiate();
+				getMail.setPOP3Host(selected_account.get(0));
+				getMail.setUser(selected_account.get(2));
+				getMail.setPassword(selected_account.get(3));
+				// 实例化发邮件件对象
+				sendMail = SendAttachMail.getSendMailInstantiate();
+				sendMail.setSMTPHost(selected_account.get(1));
+				sendMail.setUser(selected_account.get(2));
+				sendMail.setPassword(selected_account.get(3));
 				accountList.updateUI();
+				JOptionPane.showMessageDialog(null, "切换成功", "提示",
+						JOptionPane.INFORMATION_MESSAGE);
 			} else {
 				JOptionPane.showMessageDialog(null, "你没有选中任何一行不能切换账号！", "警告",
 						JOptionPane.WARNING_MESSAGE);

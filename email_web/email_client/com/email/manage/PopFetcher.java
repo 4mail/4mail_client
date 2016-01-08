@@ -12,6 +12,11 @@ import javax.mail.*;
 import javax.mail.internet.MimeMultipart;
 import javax.mail.internet.MimeUtility;
 
+/**
+ * 原测试类(可舍弃)
+ * @author zhujuan
+ *
+ */
 public class PopFetcher{
 	
     public static void main(String args[]) throws MessagingException, IOException{

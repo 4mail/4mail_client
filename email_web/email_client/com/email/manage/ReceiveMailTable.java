@@ -15,7 +15,11 @@ import com.email.window.MailTableModel;
 import com.email.window.MainFrame;
 
 
-
+/**
+ * 接收邮件类
+ * @author zhujuan
+ *
+ */
 public class ReceiveMailTable extends Thread {
 	@SuppressWarnings("rawtypes")
 	private Vector mails = null;// 构造一个空向量，使其内部数据数组的大小为

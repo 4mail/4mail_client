@@ -13,10 +13,8 @@ import com.email.window.MailTableModel;
 import com.email.window.SendFrame;
 
 /**
- * 类说明：已发送邮件表格模板
- * 
- * @author 作者: LiuJunGuang
- * @version 创建时间：2011-2-23 下午07:43:35
+ * 已发送邮件类
+ *
  */
 public class SendedMailTable {// 采用单例模式保证表格的唯一
 	private static SendedMailTable sendedMail = new SendedMailTable();// 本类对象

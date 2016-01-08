@@ -8,10 +8,9 @@ import javax.swing.JTable;
 import com.email.window.MailTableModel;
 
 /**
- * 类说明：恢复邮件类
- * 
- * @author 作者:user
- * @version 创建时间：2011-2-22 下午06:37:03
+ * 恢复邮件类
+ * @author zhujuan
+ *
  */
 public class RecycleMailTable {
 	private static RecycleMailTable recycleMail = new RecycleMailTable();;

@@ -26,8 +26,12 @@ import javax.mail.internet.ContentType;
 import javax.mail.internet.MimeUtility;
 
 import com.email.login.SmtpPop3Auth;
-import com.email.outbox.AttachFile;
 
+/**
+ * 获取邮件
+ * @author zhujuan
+ *
+ */
 public class GetMail {
 
 	private String POP3Host = ""; // POP3服务器

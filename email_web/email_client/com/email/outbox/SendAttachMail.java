@@ -22,6 +22,10 @@ import javax.mail.internet.MimeUtility;
 
 import com.email.login.SmtpPop3Auth;
 
+/**
+ * 发送带附件邮件
+ *
+ */
 public class SendAttachMail {
 
 	private String SMTPHost = ""; // SMTP服务器

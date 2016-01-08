@@ -11,6 +11,11 @@ import com.email.login.SaveAccount2XML;
 import com.email.manage.GetMail;
 import com.email.outbox.SendAttachMail;
 
+/**
+ * ÕËºÅ²Ù×÷ÊÂ¼þ
+ * @author zhujuan
+ *
+ */
 public class AccountEventAction {
 	Vector<Vector<String>> accountVectors = AccountListTableModel.getVector();
 	private JTextField pop_server = null, smtp_server = null, username = null, password = null;

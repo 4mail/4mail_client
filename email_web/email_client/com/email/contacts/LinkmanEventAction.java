@@ -7,8 +7,7 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 
 /**
- * 
- * @author zhujuan
+ * 联系人列表
  *
  */
 public class LinkmanEventAction {

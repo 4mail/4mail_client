@@ -82,7 +82,9 @@ public class AddAccountFrame extends JInternalFrame implements ActionListener, D
 
 	    accountList = new JTable();// 账户列表
 		accountList.setModel(new AccountListTableModel());
-		AccountJSP = new JScrollPane(accountList);
+		accountList.getTableHeader().getColumnModel().getColumn(3).setMinWidth(0);
+        accountList.getTableHeader().getColumnModel().getColumn(3).setMaxWidth(0);
+        AccountJSP = new JScrollPane(accountList);
 		AccountJSP.setPreferredSize(new Dimension(400, 150));
 
 		add = new JButton("添加");

@@ -13,7 +13,7 @@ import org.dom4j.io.XMLWriter;
 
 /**
  * 
- * @author zhujuan
+ * 保存联系人列表
  *
  */
 public class SaveLinkmans2XML {

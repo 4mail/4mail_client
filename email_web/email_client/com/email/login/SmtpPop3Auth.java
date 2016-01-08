@@ -4,7 +4,11 @@ import javax.mail.Authenticator;
 import javax.mail.PasswordAuthentication;
 
 
-
+/**
+ * 保存账号和密码的类
+ * @author zhujuan
+ *
+ */
 public class SmtpPop3Auth extends Authenticator {
 	String user, password;
 

@@ -13,6 +13,11 @@ import org.dom4j.io.SAXReader;
 
 import com.email.login.AccountListTableModel;
 
+/**
+ * 读取账户列表
+ * @author zhujuan
+ *
+ */
 public class ReadAccountXML {
 	private static Vector<Vector<String>> accounts = AccountListTableModel
 			.getVector();

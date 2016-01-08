@@ -8,6 +8,11 @@ import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Store;
 
+/**
+ * 检测新邮件操作
+ * @author zhujuan
+ *
+ */
 public class CheckNewMialUtil {
 	private String POP3Host = ""; // POP3服务器
 	private String user = ""; // 登录POP3服务器的帐号

@@ -13,7 +13,7 @@ import org.dom4j.io.SAXReader;
 
 /**
  * 
- * @author zhujuan
+ * 读取联系人列表
  *
  */
 public class ReadLinkmanXMl {

@@ -11,6 +11,11 @@ import org.dom4j.Element;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.XMLWriter;
 
+/**
+ * 保存账号列表
+ * @author zhujuan
+ *
+ */
 public class SaveAccount2XML {
 	private Document document = null;// xml文档对象
 	private Element accountsElement = null;// 创建根元素

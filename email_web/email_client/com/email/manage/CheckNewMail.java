@@ -3,10 +3,9 @@ package com.email.manage;
 import com.email.window.SystemBickerTray;
 
 /**
- * 类说明：检测新邮件类
- * 
- * @author 作者: LiuJunGuang
- * @version 创建时间：2011-2-26 下午04:26:45
+ * 检测新邮件
+ * @author zhujuan
+ *
  */
 public class CheckNewMail extends Thread {
 	private static int MailCount = 0;// 新邮件总数计数器

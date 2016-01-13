@@ -21,8 +21,6 @@ import com.email.manage.ReceiveMailTable;
 /**
  * 类说明：系统闪动托盘类
  * 
- * @author 作者: LiuJunGuang
- * @version 创建时间：2011-2-26 下午02:08:47
  */
 public class SystemBickerTray extends Thread {
 	private SystemTray sysTray = null;// 当前操作系统的托盘对象

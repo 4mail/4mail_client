@@ -10,8 +10,6 @@ import com.email.manage.RecycleMailTable;
 /**
  * 类说明：回收站 删除邮件的恢复和彻底删除
  * 
- * @author 作者: user
- * @version 创建时间：2011-2-22 下午06:08:58
  */
 @SuppressWarnings("serial")
 public class RecycleFrame extends BaseReceiceFrame {

@@ -4,8 +4,6 @@ package com.email.window;
 /**
  * 类说明：产生主界面上的各种类
  * 
- * @author 作者: LiuJunGuang
- * @version 创建时间：2011-2-24 下午03:13:30
  */
 public class FrameFactory {
 	private static FrameFactory factory = new FrameFactory();

@@ -11,8 +11,6 @@ import javax.swing.JProgressBar;
 /**
  * 类说明：进度条界面类 包括有、无模式两种进度条
  * 
- * @author 作者: user
- * @version 创建时间：2011-2-25 下午04:26:52
  */
 @SuppressWarnings("serial")
 public class JProgressBarFrame extends JDialog {

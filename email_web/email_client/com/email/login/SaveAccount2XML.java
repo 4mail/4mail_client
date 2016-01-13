@@ -20,7 +20,7 @@ public class SaveAccount2XML {
 	private Document document = null;// xml文档对象
 	private Element accountsElement = null;// 创建根元素
 
-	// 保存联系人为xml文档
+	// 保存账户为xml文档
 	public boolean saveAccountXml(String fileName,
 			Vector<Vector<String>> accountVector) {
 		boolean isSave = false;
@@ -35,7 +35,7 @@ public class SaveAccount2XML {
 				String password = vector.get(3);
 				saveAccountInfor(pop_server, smtp_server, username, password);
 			}
-			saveXMLFile(fileName);// 保存联系人xml文件
+			saveXMLFile(fileName);// 保存账户xml文件
 			isSave = true;// 保存成功
 		}
 		return isSave;
@@ -75,7 +75,7 @@ public class SaveAccount2XML {
 		passwordElement.setText(password);
 	}
 
-	// 保存通讯录xml文件
+	// 保存账户xml文件
 	private void saveXMLFile(String fileName) {
 		XMLWriter output;
 		try {

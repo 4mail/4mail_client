@@ -27,8 +27,6 @@ import com.email.manage.ReceiveMailTable;
 /**
  * 类说明：接受邮件界面、回收站界面、已发送界面的父类
  * 
- * @author 作者: LiuJunGuang
- * @version 创建时间：2011-2-23 下午05:09:31
  */
 @SuppressWarnings("serial")
 public class BaseReceiceFrame extends JInternalFrame implements MouseListener,

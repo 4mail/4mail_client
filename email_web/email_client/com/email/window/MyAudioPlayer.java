@@ -9,8 +9,6 @@ import sun.audio.AudioStream;
 /**
  * 类说明：播放音乐类
  * 
- * @author 作者: LiuJunGuang
- * @version 创建时间：2011-2-26 下午03:41:25
  */
 public class MyAudioPlayer {
 	private URL url = null;// 音乐文件的URl

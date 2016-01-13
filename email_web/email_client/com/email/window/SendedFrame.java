@@ -8,8 +8,6 @@ import com.email.outbox.SendedMailTable;
 /**
  * 类说明：已发送邮件界面
  * 
- * @author 作者: LiuJunGuang
- * @version 创建时间：2011-2-23 下午07:40:23
  */
 @SuppressWarnings("serial")
 public class SendedFrame extends BaseReceiceFrame {
